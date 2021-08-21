@@ -1,0 +1,15 @@
+VMware Machine Clone & DHCP server IP issue fix
+==============================================
+Step 1. nano /etc/netplan/00-installer-config.yaml
+
+network:
+  ethernets:
+    ens33:
+      dhcp4: true
+      dhcp-identifier: mac --Add New Line
+  version: 2
+  
+  Step 2: netplan try 
+  Step 3: netplan apply
+  Step 4: ifconfig 
+  Enjoy..................
